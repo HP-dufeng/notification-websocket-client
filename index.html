@@ -1,0 +1,13 @@
+<head>
+
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        var ws = new WebSocket("ws://localhost:8080/ws");
+        ws.onmessage = function (event) {
+            var data = JSON.parse(event.data)
+            console.log(data);
+        }
+    </script>
+</body>
